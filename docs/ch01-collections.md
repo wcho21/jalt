@@ -1,5 +1,8 @@
 # Collections
 
+This chapter covers fundamental data structures: array and linked list.
+There are important data structures: stack and queue, which can be implemented using array or linked list.
+
 ## Fundamental data structures
 
 ### Array
@@ -36,7 +39,7 @@ However, note that it can be more error-prone than expected to maintain an extra
 
 - Make a singly linked list.
 
-  *Possible answer*: see [LinkNode.java](../src/ListNode.java)
+  *Possible answer*: see [ListNode.java](../src/ListNode.java)
 
 ## Collections
 
@@ -44,7 +47,7 @@ However, note that it can be more error-prone than expected to maintain an extra
 
 **Stack**, or **pushdown stack** is last-in-first-out collection.
 It supports abstract operations: **push** to put an element, and **pop** to get.
-These two operation should take time independent of the size of stack.
+These two operations should take time independent of the size of stack.
 
 Think of the stack as an abstract data type (ADT).
 The client programmer should not need to know the implementation details.
@@ -63,3 +66,33 @@ We can actually impelement a stack using either an array or a linked list.
 - Make a stack using a linked list.
 
   *Possible answer*: see [ListStack.java](../src/ListStack.java)
+
+Where can we use stacks? See Dijkstra's *shunting yard algorithms*, or *call stack* concept for your favorite programming language.
+
+### Queue
+
+**Queue** is, on the other hand, first-in-first-out collection.
+It supports abstract operations: **enqueue** to put an element, and **dequeue** to get.
+These two operations also should take constant time as stack does.
+
+*Exercises*
+
+- Make an interface for queue.
+
+  *Possible answer*: see [Queue.java](../src/Queue.java)
+
+- Make a queue using a linked list. Make it iterable if possible.
+
+  *Possible answer*: see [ListQueue.java](../src/ListQueue.java)
+
+- Can you make a queue using two stacks? Can you make a stack using two queues?
+
+*Variation of queue*: The operations such as enqueuing occurs at one end of the queue.
+However, we can make a double-ended queue, or **deque**, that supports enqueuing and dequeuing at both ends.
+Note that it can be implemented with doubly linked list.
+
+## Misc.
+
+*Java-specific note*: Java does not allow generic arrays.
+To understand why, learn about *covariant array*.
+When we make a generic stack with array, for example, we need to consider this fact, though there is an workaround.
