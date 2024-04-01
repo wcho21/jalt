@@ -9,7 +9,7 @@ DIST_DIR:=./dist
 DATA_DIR:=./data
 CLASSPATH:=./src
 
-SRC:=ArrayStack ListStack ListQueue
+SRC:=ArrayStack ListStack ListQueue QuickFind
 BUILD_TARGETS:=$(foreach S,$(SRC),${DIST_DIR}/${PACKAGE}/$S.class)
 
 .PHONY: build
@@ -24,6 +24,9 @@ ${DIST_DIR}/${PACKAGE}/ListStack.class: ${SRC_DIR}/ListStack.java ${SRC_DIR}/Sta
 ${DIST_DIR}/${PACKAGE}/ListQueue.class: ${SRC_DIR}/ListQueue.java ${SRC_DIR}/Queue.java ${SRC_DIR}/ListNode.java ${SRC_DIR}/ListIterator.java
 	${JAVAC} ${JAVAC_FLAGS} -d ${DIST_DIR} $^
 
+${DIST_DIR}/${PACKAGE}/QuickFind.class: ${SRC_DIR}/QuickFind.java ${SRC_DIR}/UnionFind.java
+	${JAVAC} ${JAVAC_FLAGS} -d ${DIST_DIR} $^
+
 .PHONY: testArrayStack
 testArrayStack: ${DIST_DIR}/${PACKAGE}/ArrayStack.class
 	${JAVA} -cp ${DIST_DIR} ${PACKAGE}.ArrayStack < ${DATA_DIR}/loremShort.txt
@@ -35,6 +38,10 @@ testListStack: ${DIST_DIR}/${PACKAGE}/ListStack.class
 .PHONY: testListQueue
 testListQueue: ${DIST_DIR}/${PACKAGE}/ListQueue.class
 	${JAVA} -cp ${DIST_DIR} ${PACKAGE}.ListQueue < ${DATA_DIR}/loremShort.txt
+
+.PHONY: testQuickFind
+testQuickFind: ${DIST_DIR}/${PACKAGE}/QuickFind.class
+	${JAVA} -cp ${DIST_DIR} ${PACKAGE}.QuickFind < ${DATA_DIR}/unionFindSmall.txt
 
 .PHONY: clean
 clean:
