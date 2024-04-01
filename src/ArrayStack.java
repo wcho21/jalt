@@ -24,7 +24,11 @@ public class ArrayStack<T> implements Stack<T> {
   }
 
   public T pop() {
-    return this.arr[--n];
+    T element = this.arr[--n];
+
+    this.arr[n] = null;
+
+    return element;
   }
 
   public boolean isEmpty() {
