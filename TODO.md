@@ -1,0 +1,3 @@
+- Union-Find
+  - Dynamic connectivity problem
+  - Three implementations: quick-find, quick-union, path compression (optimal)
