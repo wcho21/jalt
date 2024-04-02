@@ -7,35 +7,40 @@ PACKAGE:=jalt
 SRC_DIR:=./src
 DIST_DIR:=./dist
 DATA_DIR:=./data
-CLASSPATH:=./src
+CLASSPATH:=./dist
+DIST_PACKAGE_PATH=$(DIST_DIR)/$(PACKAGE)
 
 SRC:=ArrayStack ListStack ListQueue
-BUILD_TARGETS:=$(foreach S,$(SRC),${DIST_DIR}/${PACKAGE}/$S.class)
+BUILD_TARGETS:=$(foreach S,$(SRC),$(DIST_DIR)/$(PACKAGE)/$S.class)
+
+define dist-files
+	$(foreach F,$1,$(DIST_PACKAGE_PATH)/$F.class)
+endef
+
+define run-test
+	$(JAVA) -cp $(DIST_DIR) $(PACKAGE).$1 < $(DATA_DIR)/$2
+endef
 
 .PHONY: build
-build: ${BUILD_TARGETS}
+build: $(BUILD_TARGETS)
 
-${DIST_DIR}/${PACKAGE}/ArrayStack.class: ${SRC_DIR}/ArrayStack.java ${SRC_DIR}/Stack.java ${SRC_DIR}/ArrayReverseIterator.java
-	${JAVAC} ${JAVAC_FLAGS} -d ${DIST_DIR} $^
+$(DIST_PACKAGE_PATH)/%.class: $(SRC_DIR)/%.java
+	$(JAVAC) $(JAVAC_FLAGS) -cp $(CLASSPATH) -d $(DIST_DIR) $<
 
-${DIST_DIR}/${PACKAGE}/ListStack.class: ${SRC_DIR}/ListStack.java ${SRC_DIR}/Stack.java ${SRC_DIR}/ListNode.java ${SRC_DIR}/ListIterator.java
-	${JAVAC} ${JAVAC_FLAGS} -d ${DIST_DIR} $^
+$(DIST_PACKAGE_PATH)/ArrayStack.class: $(SRC_DIR)/ArrayStack.java \
+	$(call dist-files,Stack ArrayReverseIterator)
 
-${DIST_DIR}/${PACKAGE}/ListQueue.class: ${SRC_DIR}/ListQueue.java ${SRC_DIR}/Queue.java ${SRC_DIR}/ListNode.java ${SRC_DIR}/ListIterator.java
-	${JAVAC} ${JAVAC_FLAGS} -d ${DIST_DIR} $^
+$(DIST_PACKAGE_PATH)/ListStack.class: $(SRC_DIR)/ListStack.java \
+	$(call dist-files,Stack ListNode ListIterator)
 
-.PHONY: testArrayStack
-testArrayStack: ${DIST_DIR}/${PACKAGE}/ArrayStack.class
-	${JAVA} -cp ${DIST_DIR} ${PACKAGE}.ArrayStack < ${DATA_DIR}/loremShort.txt
+$(DIST_PACKAGE_PATH)/ListQueue.class: $(SRC_DIR)/ListQueue.java \
+	$(call dist-files,Queue ListNode ListIterator)
 
-.PHONY: testListStack
-testListStack: ${DIST_DIR}/${PACKAGE}/ListStack.class
-	${JAVA} -cp ${DIST_DIR} ${PACKAGE}.ListStack < ${DATA_DIR}/loremShort.txt
-
-.PHONY: testListQueue
-testListQueue: ${DIST_DIR}/${PACKAGE}/ListQueue.class
-	${JAVA} -cp ${DIST_DIR} ${PACKAGE}.ListQueue < ${DATA_DIR}/loremShort.txt
+# example: make test class=ArrayStack input=loremShort.txt
+.PHONY: test
+test: $(DIST_PACKAGE_PATH)/$(class).class
+	$(call run-test,$(class),$(input))
 
 .PHONY: clean
 clean:
-	rm -rf ${DIST_DIR}
+	rm -rf $(DIST_DIR)
