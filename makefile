@@ -10,7 +10,9 @@ DATA_DIR:=./data
 CLASSPATH:=./dist
 DIST_PACKAGE_PATH=$(DIST_DIR)/$(PACKAGE)
 
-SRC:=ArrayStack ListStack ListQueue
+SRC:=ArrayStack ListStack ListQueue \
+	SelectionSort InsertionSort ShellSort \
+	BinarySearch
 BUILD_TARGETS:=$(foreach S,$(SRC),$(DIST_DIR)/$(PACKAGE)/$S.class)
 
 define dist-files
@@ -35,6 +37,18 @@ $(DIST_PACKAGE_PATH)/ListStack.class: $(SRC_DIR)/ListStack.java \
 
 $(DIST_PACKAGE_PATH)/ListQueue.class: $(SRC_DIR)/ListQueue.java \
 	$(call dist-files,Queue ListNode ListIterator)
+
+$(DIST_PACKAGE_PATH)/SelectionSort.class: $(SRC_DIR)/SelectionSort.java \
+	$(call dist-files,SortStrategy Utils)
+
+$(DIST_PACKAGE_PATH)/InsertionSort.class: $(SRC_DIR)/InsertionSort.java \
+	$(call dist-files,SortStrategy Utils)
+
+$(DIST_PACKAGE_PATH)/ShellSort.class: $(SRC_DIR)/ShellSort.java \
+	$(call dist-files,SortStrategy Utils)
+
+$(DIST_PACKAGE_PATH)/BinarySearch.class: $(SRC_DIR)/BinarySearch.java \
+	$(call dist-files,Utils)
 
 # example: make test class=ArrayStack input=loremShort.txt
 .PHONY: test
