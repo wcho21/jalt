@@ -1,12 +1,14 @@
 package jalt;
 
+import java.util.Comparator;
+
 public class SelectionSort implements SortStrategy {
-  public <T extends Comparable<T>> void sort(T[] arr) {
+  public <T> void sort(T[] arr, Comparator<T> comparator) {
     for (int i = 0; i < arr.length; ++i) {
       // find minimum
       int min = i;
       for (int j = i; j < arr.length; ++j) {
-        if (arr[j].compareTo(arr[min]) < 0) {
+        if (comparator.compare(arr[j], arr[min]) < 0) {
           min = j;
         }
       }
@@ -22,9 +24,7 @@ public class SelectionSort implements SortStrategy {
     // read input
     String[] arr = Utils.readAsArray();
 
-    // sort
-    SortStrategy strategy = new SelectionSort();
-    strategy.sort(arr);
+    Sorter.sort(arr, new SelectionSort());
 
     assert Utils.isSorted(arr);
   }

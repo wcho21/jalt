@@ -39,13 +39,13 @@ $(DIST_PACKAGE_PATH)/ListQueue.class: $(SRC_DIR)/ListQueue.java \
 	$(call dist-files,Queue ListNode ListIterator)
 
 $(DIST_PACKAGE_PATH)/SelectionSort.class: $(SRC_DIR)/SelectionSort.java \
-	$(call dist-files,SortStrategy Utils)
+	$(call dist-files,SortStrategy Utils Sorter)
 
 $(DIST_PACKAGE_PATH)/InsertionSort.class: $(SRC_DIR)/InsertionSort.java \
-	$(call dist-files,SortStrategy Utils)
+	$(call dist-files,SortStrategy Utils Sorter)
 
 $(DIST_PACKAGE_PATH)/ShellSort.class: $(SRC_DIR)/ShellSort.java \
-	$(call dist-files,SortStrategy Utils)
+	$(call dist-files,SortStrategy Utils Sorter)
 
 $(DIST_PACKAGE_PATH)/BinarySearch.class: $(SRC_DIR)/BinarySearch.java \
 	$(call dist-files,Utils)

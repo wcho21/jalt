@@ -1,10 +1,12 @@
 package jalt;
 
+import java.util.Comparator;
+
 public class InsertionSort implements SortStrategy {
-  public <T extends Comparable<T>> void sort(T[] arr) {
+  public <T> void sort(T[] arr, Comparator<T> comparator) {
     for (int i = 1; i < arr.length; ++i) {
       for (int j = i; j > 0; --j) {
-        if (arr[j-1].compareTo(arr[j]) <= 0) {
+        if (comparator.compare(arr[j-1], arr[j]) <= 0) {
           break;
         }
 
@@ -21,7 +23,7 @@ public class InsertionSort implements SortStrategy {
 
     // sort
     SortStrategy strategy = new InsertionSort();
-    strategy.sort(arr);
+    Sorter.sort(arr, new InsertionSort());
 
     assert Utils.isSorted(arr);
   }

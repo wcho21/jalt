@@ -1,7 +1,9 @@
 package jalt;
 
+import java.util.Comparator;
+
 public class ShellSort implements SortStrategy {
-  public <T extends Comparable<T>> void sort(T[] arr) {
+  public <T> void sort(T[] arr, Comparator<T> comparator) {
     int gap = 1;
     while (gap < arr.length / 3) {
       gap = gap * 3 + 1;
@@ -10,7 +12,7 @@ public class ShellSort implements SortStrategy {
     while (gap >= 1) {
       for (int i = gap; i < arr.length; ++i) {
         for (int j = i; j >= gap; j -= gap) {
-          if (arr[j-gap].compareTo(arr[j]) <= 0) {
+          if (comparator.compare(arr[j-gap], arr[j]) <= 0) {
             break;
           }
 
@@ -28,9 +30,7 @@ public class ShellSort implements SortStrategy {
     // read input
     String[] arr = Utils.readAsArray();
 
-    // sort
-    SortStrategy strategy = new ShellSort();
-    strategy.sort(arr);
+    Sorter.sort(arr, new ShellSort());
 
     assert Utils.isSorted(arr);
   }
