@@ -67,7 +67,11 @@ We can actually impelement a stack using either an array or a linked list.
 
   *Possible answer*: see [ListStack.java](../src/ListStack.java)
 
-Where can we use stacks? See Dijkstra's *shunting yard algorithms*, or *call stack* concept for your favorite programming language.
+Where can we use stacks?
+See the concept of the *call stack* in your favorite programming language.
+Whenever we use recursion, the programming lauguage implicitly use a stack data structure,
+to remember the calling position in a recursive call.
+For another example, see Dijkstra's *shunting yard algorithms*, which evaluates a simple arithmetic expression such as `2*(3+4)`.
 
 ### Queue
 
