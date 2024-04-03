@@ -6,6 +6,7 @@ Short tutorials are in `docs/` directory.
 
 - Chapter 1. [Collections](docs/01-collections.md)
 - Chapter 2. [Complexity](docs/02-complexity.md)
+- Chapter 3. [Basic sort and search](docs/03-basic-sort-and-search.md)
 
 You can build java files using `make` as below:
 
