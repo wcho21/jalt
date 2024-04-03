@@ -8,7 +8,9 @@ Java algorithm library with tutorials.
 - Chapter 2. [Complexity](docs/02-complexity.md)
 - Chapter 3. [Basic sort and search](docs/03-basic-sort-and-search.md)
 
-## How to build
+## How to use source codes
+
+### Building
 
 You can build java files using `makefile` as below:
 
@@ -20,6 +22,15 @@ or, using a wrapper bash script:
 
 ```
 $ ./build.sh
+```
+
+### Testing
+
+You can use a wrapper bash script for testing.
+For example, to test `ArrayStack.class` with `data/loremShort.txt` as input, run:
+
+```
+$ ./test.sh ArrayStack loremShort.txt
 ```
 
 ## References
