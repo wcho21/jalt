@@ -73,6 +73,10 @@ Whenever we use recursion, the programming lauguage implicitly use a stack data 
 to remember the calling position in a recursive call.
 For another example, see Dijkstra's *shunting yard algorithms*, which evaluates a simple arithmetic expression such as `2*(3+4)`.
 
+*Exercises*
+
+- Can any recursive algorithm be transformed into an iterative algorithm, and vice versa?
+
 ### Queue
 
 **Queue** is, on the other hand, first-in-first-out collection.
