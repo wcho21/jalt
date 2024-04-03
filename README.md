@@ -16,6 +16,12 @@ You can build java files using `makefile` as below:
 $ make build
 ```
 
+or, using a wrapper bash script:
+
+```
+$ ./build.sh
+```
+
 ## References
 
 - Algorithms (4th ed., Robert Sedgewick and Kevin Wayne)
