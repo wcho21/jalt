@@ -11,7 +11,7 @@ CLASSPATH:=./dist
 DIST_PACKAGE_PATH=$(DIST_DIR)/$(PACKAGE)
 
 SRC:=ArrayStack ListStack ListQueue \
-	SelectionSort InsertionSort ShellSort \
+	SelectionSort InsertionSort ShellSort MergeSort \
 	BinarySearch
 BUILD_TARGETS:=$(foreach S,$(SRC),$(DIST_DIR)/$(PACKAGE)/$S.class)
 
@@ -45,6 +45,9 @@ $(DIST_PACKAGE_PATH)/InsertionSort.class: $(SRC_DIR)/InsertionSort.java \
 	$(call dist-files,SortStrategy Utils Sorter)
 
 $(DIST_PACKAGE_PATH)/ShellSort.class: $(SRC_DIR)/ShellSort.java \
+	$(call dist-files,SortStrategy Utils Sorter)
+
+$(DIST_PACKAGE_PATH)/MergeSort.class: $(SRC_DIR)/MergeSort.java \
 	$(call dist-files,SortStrategy Utils Sorter)
 
 $(DIST_PACKAGE_PATH)/BinarySearch.class: $(SRC_DIR)/BinarySearch.java \
