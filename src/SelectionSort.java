@@ -1,6 +1,9 @@
 package jalt;
 
 import java.util.Comparator;
+import static jalt.Utils.isLessThan;
+import static jalt.Utils.swap;
+import static jalt.Utils.readAsArray;
 
 public class SelectionSort implements SortStrategy {
   public <T> void sort(T[] arr, Comparator<T> comparator) {
@@ -8,21 +11,19 @@ public class SelectionSort implements SortStrategy {
       // find minimum
       int min = i;
       for (int j = i; j < arr.length; ++j) {
-        if (comparator.compare(arr[j], arr[min]) < 0) {
+        if (isLessThan(arr[j], arr[min], comparator)) {
           min = j;
         }
       }
 
       // put minimum at right place
-      T temp = arr[i];
-      arr[i] = arr[min];
-      arr[min] = temp;
+      swap(arr, i, min);
     }
   }
 
   public static void main(String[] args) {
     // read input
-    String[] arr = Utils.readAsArray();
+    String[] arr = readAsArray();
 
     Sorter.sort(arr, new SelectionSort());
 

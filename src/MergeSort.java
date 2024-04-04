@@ -1,6 +1,8 @@
 package jalt;
 
 import java.util.Comparator;
+import static jalt.Utils.isLessThan;
+import static jalt.Utils.readAsArray;
 
 public class MergeSort implements SortStrategy {
   public <T> void sort(T[] arr, Comparator<T> comparator) {
@@ -40,7 +42,7 @@ public class MergeSort implements SortStrategy {
         continue;
       }
 
-      if (comparator.compare(arr[deck1], arr[deck2]) < 0) {
+      if (isLessThan(arr[deck1], arr[deck2], comparator)) {
         arr[i] = arr[deck1++];
       } else {
         arr[i] = arr[deck2++];
@@ -50,7 +52,7 @@ public class MergeSort implements SortStrategy {
 
   public static void main(String[] args) {
     // read input
-    String[] arr = Utils.readAsArray();
+    String[] arr = readAsArray();
 
     Sorter.sort(arr, new SelectionSort());
 
