@@ -29,6 +29,11 @@ For an example of implementation, see [InsertionSort.java](../src/InsertionSort.
   the number of inversions.
   This explains why insertion sort is fast for fully or partially sorted input.
 
+- (Hard) What is an algorithm to calculate the number of inversions?
+  Can you implement such an algorithm better than $O(n^2)$?
+  Search for **Kendall tau distance**.
+  How does this related to inversions?
+
 - We can make a simple but powerful improvement over inserion sort.
   Insertion sort swaps only the adjacent elements.
   Instead, **Shellsort** swaps the elements that are far apart.
