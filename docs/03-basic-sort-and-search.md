@@ -13,7 +13,7 @@ Imagine a dealer handing you cards one by one, and
 you placing each card in its right place to keep the cards sorted.
 This kind of sorting happens in insertion sort.
 
-For an example of implementation, see [InsertionSort.java](../src/InsertionSort.java).
+For an example of implementation, see [InsertionSort.java](../src/main/java/sorts/InsertionSort.java).
 
 *Exercises*
 
@@ -40,7 +40,7 @@ For an example of implementation, see [InsertionSort.java](../src/InsertionSort.
   Implement the Shellsort.
   Explain why the shell sort is even faster than insertion sort in terms of inversions.
 
-  **Possible answer**: see [ShellSort.java](../src/ShellSort.java).
+  **Possible answer**: see [ShellSort.java](../src/main/java/sorts/ShellSort.java).
 
 Insertion sort is basic sorting algorithm but also used in other sorting algorithm.
 
@@ -61,7 +61,7 @@ We first choose the middle element in the collection.
 If the key is greater than that, we can discard the first half of the collection (and similarly if the key is less than that).
 In this way, we can reduce drastically the number of candidates, which makes the binary search fast.
 
-For an example of implementation, see [BinarySearch.java](../src/BinarySearch.java).
+For an example of implementation, see [BinarySearch.java](../src/main/java/search/BinarySearch.java).
 
 *Exercises*
 

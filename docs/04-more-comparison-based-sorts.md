@@ -9,7 +9,7 @@ The basic idea is like *merging* two card decks that are already sorted.
 Note that a deck of a single card is already sorted, which is a base case in recursion.
 In a divide-and-conquer manner, the whole deck is divided into single cards and then merged into a sorted deck
 
-For an example of implementation, see [MergeSort.java](../src/MergeSort.java)
+For an example of implementation, see [MergeSort.java](../src/main/java/sorts/MergeSort.java)
 
 *Exercises*
 
@@ -31,7 +31,7 @@ Quicksort chooses a "pivot" and partition an array into two parts, where the fir
 The choice of the pivot determines the performance of this algorithm, and it usually has $O(n \lg n)$ on average.
 While it has $O(n^2)$ for worst cases, such cases are highly unlikely.
 
-For an example of implementation, see [QuickSort.java](../src/QuickSort.java)
+For an example of implementation, see [QuickSort.java](../src/main/java/sorts/QuickSort.java)
 
 *Exercises*
 
@@ -43,7 +43,7 @@ For an example of implementation, see [QuickSort.java](../src/QuickSort.java)
   and reduces the complexity to $O(n)$ if all keys are the same.
   Implement the quicksort with three-way partitioning.
 
-  *Possible answer*: [QuickSort3Way.java](../src/QuickSort3Way.java)
+  *Possible answer*: [QuickSort3Way.java](../src/main/java/sorts/QuickSort3Way.java)
 
 ## Heapsort
 

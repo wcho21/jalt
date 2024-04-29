@@ -9,15 +9,13 @@ Java algorithm library with tutorials.
 - Chapter 3. [Basic sort and search](docs/03-basic-sort-and-search.md)
 - Chapter 4. [More comparison-based sorts](docs/04-more-comparison-based-sorts.md)
 
+## Testing
+
+Run `mvn test`.
+
 ## Algorithms
 
 See [ALGORITHMS.md](ALGORITHMS.md).
-
-## How to use source codes
-
-### Testing
-
-run `mvn test`
 
 ## References
 
