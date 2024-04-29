@@ -88,3 +88,7 @@ In this case, **selection sort** can be a good alternative.
 - How many times does a swap occur in selection sort for $n$ elements?
 
   *Answer*: at most $n$ times.
+
+- Implement the selection sort
+
+  *Possible answer*: see [SelectionSort.java](../src/main/java/sorts/SelectionSort.java)
