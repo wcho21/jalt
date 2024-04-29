@@ -39,7 +39,7 @@ However, note that it can be more error-prone than expected to maintain an extra
 
 - Make a singly linked list.
 
-  *Possible answer*: see [ListNode.java](../src/ListNode.java)
+  *Possible answer*: see [ListNode.java](../src/main/java/collections/list/ListNode.java)
 
 ## Collections
 
@@ -57,15 +57,15 @@ We can actually impelement a stack using either an array or a linked list.
 
 - Make an interface for stack.
 
-  *Possible answer*: see [Stack.java](../src/Stack.java)
+  *Possible answer*: see [Stack.java](../src/main/java/collections/Stack.java)
 
 - Make a stack using an array. Make it iterable if possible.
 
-  *Possible answer*: see [ArrayStack.java](../src/ArrayStack.java)
+  *Possible answer*: see [ArrayStack.java](../src/main/java/collections/ArrayStack.java)
 
 - Make a stack using a linked list.
 
-  *Possible answer*: see [ListStack.java](../src/ListStack.java)
+  *Possible answer*: see [ListStack.java](../src/main/java/collections/ListStack.java)
 
 Where can we use stacks?
 See the concept of the *call stack* in your favorite programming language.
@@ -87,11 +87,11 @@ These two operations also should take constant time as stack does.
 
 - Make an interface for queue.
 
-  *Possible answer*: see [Queue.java](../src/Queue.java)
+  *Possible answer*: see [Queue.java](../src/main/java/collections/Queue.java)
 
 - Make a queue using a linked list. Make it iterable if possible.
 
-  *Possible answer*: see [ListQueue.java](../src/ListQueue.java)
+  *Possible answer*: see [ListQueue.java](../src/main/java/collections/ListQueue.java)
 
 - Can you make a queue using two stacks? Can you make a stack using two queues?
 

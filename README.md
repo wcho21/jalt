@@ -9,34 +9,13 @@ Java algorithm library with tutorials.
 - Chapter 3. [Basic sort and search](docs/03-basic-sort-and-search.md)
 - Chapter 4. [More comparison-based sorts](docs/04-more-comparison-based-sorts.md)
 
+## Testing
+
+Run `mvn test`.
+
 ## Algorithms
 
 See [ALGORITHMS.md](ALGORITHMS.md).
-
-## How to use source codes
-
-### Building
-
-You can build java files using `makefile` as below:
-
-```
-$ make build
-```
-
-or, using a wrapper bash script:
-
-```
-$ ./build.sh
-```
-
-### Testing
-
-You can use a wrapper bash script for testing.
-For example, to test `ArrayStack.class` with `data/loremShort.txt` as input, run:
-
-```
-$ ./test.sh ArrayStack loremShort.txt
-```
 
 ## References
 
