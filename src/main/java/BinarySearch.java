@@ -22,14 +22,4 @@ public class BinarySearch {
 
     return -1; // not found
   }
-
-  static public void main(String[] args) {
-    // read input
-    String[] arr = Utils.readAsArray();
-
-    // search
-    int rank = BinarySearch.rank(arr[0], arr);
-
-    assert rank == 0;
-  }
 }
