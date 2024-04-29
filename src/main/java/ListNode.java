@@ -1,8 +1,8 @@
 package jalt;
 
 public class ListNode<T> {
-  T value;
-  ListNode<T> next;
+  public T value;
+  public ListNode<T> next;
 
   public ListNode(T value, ListNode<T> next) {
     this.value = value;
