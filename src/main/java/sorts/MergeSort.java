@@ -1,8 +1,7 @@
 package jalt.sorts;
 
 import java.util.Comparator;
-import static jalt.Utils.isLessThan;
-import static jalt.Utils.readAsArray;
+import static jalt.Util.isLessThan;
 
 public class MergeSort implements SortStrategy {
   public <T> void sort(T[] arr, Comparator<T> comparator) {

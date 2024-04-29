@@ -1,9 +1,8 @@
 package jalt.sorts;
 
 import java.util.Comparator;
-import static jalt.Utils.isLessThanOrEqualTo;
-import static jalt.Utils.swap;
-import static jalt.Utils.readAsArray;
+import static jalt.Util.isLessThanOrEqualTo;
+import static jalt.Util.swap;
 
 public class ShellSort implements SortStrategy {
   public <T> void sort(T[] arr, Comparator<T> comparator) {
