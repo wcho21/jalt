@@ -51,33 +51,4 @@ public class ListQueue<T> implements Queue<T> {
   public Iterator<T> iterator() {
     return new ListIterator<T>(this.head);
   }
-
-  // test
-  public static void main(String[] args) {
-    Queue<String> queue = new ListQueue<>();
-
-    // enqueue
-    Scanner scanner = new Scanner(System.in);
-    while (scanner.hasNext()) {
-      String str = scanner.next();
-      queue.enqueue(str);
-    }
-
-    // size
-    System.out.println("Size: " + queue.size());
-
-    // iterate
-    System.out.print("Iterate: ");
-    for (String s : queue) {
-      System.out.print(s + " ");
-    }
-    System.out.println();
-
-    // dequeue
-    System.out.print("Dequeue: ");
-    while (!queue.isEmpty()) {
-      System.out.print(queue.dequeue() + " ");
-    }
-    System.out.println();
-  }
 }
