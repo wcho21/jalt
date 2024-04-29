@@ -1,6 +1,6 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
-import jalt.BinarySearch;
+import jalt.search.BinarySearch;
 
 public class BinarySearchTest {
   @Test

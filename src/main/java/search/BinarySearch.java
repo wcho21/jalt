@@ -1,4 +1,4 @@
-package jalt;
+package jalt.search;
 
 public class BinarySearch {
   static public <T extends Comparable<T>> int rank(T key, T[] arr) {
