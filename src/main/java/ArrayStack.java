@@ -52,33 +52,4 @@ public class ArrayStack<T> implements Stack<T> {
 
     this.arr = resized;
   }
-
-  // test
-  public static void main(String[] args) {
-    Stack<String> stack = new ArrayStack<>();
-
-    // push
-    Scanner scanner = new Scanner(System.in);
-    while (scanner.hasNext()) {
-      String str = scanner.next();
-      stack.push(str);
-    }
-
-    // size
-    System.out.println("Size: " + stack.size());
-
-    // iterate
-    System.out.print("Iterate: ");
-    for (String s : stack) {
-      System.out.print(s + " ");
-    }
-    System.out.println();
-
-    // pop
-    System.out.print("Pop: ");
-    while (!stack.isEmpty()) {
-      System.out.print(stack.pop() + " ");
-    }
-    System.out.println();
-  }
 }
