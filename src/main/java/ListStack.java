@@ -39,33 +39,4 @@ public class ListStack<T> implements Stack<T> {
   public Iterator<T> iterator() {
     return new ListIterator<T>(this.head);
   }
-
-  // test
-  public static void main(String[] args) {
-    Stack<String> stack = new ListStack<>();
-
-    // push
-    Scanner scanner = new Scanner(System.in);
-    while (scanner.hasNext()) {
-      String str = scanner.next();
-      stack.push(str);
-    }
-
-    // size
-    System.out.println("Size: " + stack.size());
-
-    // iterate
-    System.out.print("Iterate: ");
-    for (String s : stack) {
-      System.out.print(s + " ");
-    }
-    System.out.println();
-
-    // pop
-    System.out.print("Pop: ");
-    while (!stack.isEmpty()) {
-      System.out.print(stack.pop() + " ");
-    }
-    System.out.println();
-  }
 }
