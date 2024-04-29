@@ -1,7 +1,7 @@
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
-import jalt.ListNode;
+import jalt.collections.list.ListNode;
 
 public class ListNodeTest {
   @Test

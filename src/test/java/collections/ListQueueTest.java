@@ -4,8 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
-import jalt.ListQueue;
-import jalt.Queue;
+import jalt.collections.ListQueue;
+import jalt.collections.Queue;
 
 public class ListQueueTest {
   @Test

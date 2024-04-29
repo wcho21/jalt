@@ -1,7 +1,9 @@
-package jalt;
+package jalt.collections;
 
-import java.util.Scanner;
 import java.util.Iterator;
+import jalt.collections.Stack;
+import jalt.collections.list.ListNode;
+import jalt.collections.iterators.ListIterator;
 
 public class ListStack<T> implements Stack<T> {
   private ListNode<T> head;

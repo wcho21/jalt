@@ -1,4 +1,4 @@
-package jalt;
+package jalt.collections.iterators;
 
 import java.util.Iterator;
 

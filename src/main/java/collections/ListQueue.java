@@ -1,7 +1,9 @@
-package jalt;
+package jalt.collections;
 
-import java.util.Scanner;
 import java.util.Iterator;
+import jalt.collections.Queue;
+import jalt.collections.list.ListNode;
+import jalt.collections.iterators.ListIterator;
 
 public class ListQueue<T> implements Queue<T> {
   private ListNode<T> head;

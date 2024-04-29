@@ -4,8 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
-import jalt.ListStack;
-import jalt.Stack;
+import jalt.collections.ListStack;
+import jalt.collections.Stack;
 
 public class ListStackTest {
   @Test

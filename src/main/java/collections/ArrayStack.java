@@ -1,7 +1,8 @@
-package jalt;
+package jalt.collections;
 
-import java.util.Scanner;
 import java.util.Iterator;
+import jalt.collections.Stack;
+import jalt.collections.iterators.ArrayReverseIterator;
 
 public class ArrayStack<T> implements Stack<T> {
   private T[] arr;

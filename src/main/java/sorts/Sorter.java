@@ -1,4 +1,4 @@
-package jalt;
+package jalt.sorts;
 
 import java.util.Comparator;
 import java.util.function.Function;

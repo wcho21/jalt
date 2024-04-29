@@ -1,9 +1,10 @@
-package jalt;
+package jalt.collections.iterators;
 
+import jalt.collections.list.ListNode;
 import java.util.Iterator;
 
 public class ListIterator<T> implements Iterator<T> {
-  public ListNode<T> node;
+  private ListNode<T> node;
 
   public ListIterator(ListNode<T> node) {
     this.node = node;

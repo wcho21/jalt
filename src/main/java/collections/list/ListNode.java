@@ -1,4 +1,4 @@
-package jalt;
+package jalt.collections.list;
 
 public class ListNode<T> {
   public T value;
