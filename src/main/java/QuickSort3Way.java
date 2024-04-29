@@ -27,9 +27,10 @@ public class QuickSort3Way implements SortStrategy {
     int pivotLow = low;
     int pivotHigh = high;
     int i = low+1;
-    int j = high;
+    int j = high-1;
     while (i < pivotHigh) {
       int compared = comparator.compare(arr[i], pivot);
+
       if (compared < 0) { // a[i] < pivot
         swap(arr, pivotLow++, i++);
       } else if (compared > 0) { // a[i] > pivot
@@ -40,15 +41,6 @@ public class QuickSort3Way implements SortStrategy {
     }
 
     return new IntPair(pivotLow, pivotHigh);
-  }
-
-  public static void main(String[] args) {
-    // read input
-    String[] arr = readAsArray();
-
-    Sorter.sort(arr, new SelectionSort());
-
-    assert Utils.isSorted(arr);
   }
 
   private class IntPair {

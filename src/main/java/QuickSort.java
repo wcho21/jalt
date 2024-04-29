@@ -26,7 +26,7 @@ public class QuickSort implements SortStrategy {
     T pivot = arr[low];
 
     int i = low+1;
-    int j = high;
+    int j = high-1;
     while (true) {
       while (i < j && isLessThan(arr[i], pivot, comparator)) {
         ++i;
@@ -41,16 +41,7 @@ public class QuickSort implements SortStrategy {
       swap(arr, i, j);
     }
 
-    swap(arr, low, j);
+    swap(arr, low, j-1);
     return j;
-  }
-
-  public static void main(String[] args) {
-    // read input
-    String[] arr = readAsArray();
-
-    Sorter.sort(arr, new SelectionSort());
-
-    assert Utils.isSorted(arr);
   }
 }
