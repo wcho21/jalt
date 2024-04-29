@@ -34,28 +34,19 @@ public class MergeSort implements SortStrategy {
     int deck2 = mid;
     for (int i = low; i < high; ++i) {
       if (deck1 >= mid) {
-        arr[i] = arr[deck2++];
+        arr[i] = aux[deck2++];
         continue;
       }
-      if (deck2 >= mid) {
-        arr[i] = arr[deck1++];
+      if (deck2 >= high) {
+        arr[i] = aux[deck1++];
         continue;
       }
 
-      if (isLessThan(arr[deck1], arr[deck2], comparator)) {
-        arr[i] = arr[deck1++];
+      if (isLessThan(aux[deck1], aux[deck2], comparator)) {
+        arr[i] = aux[deck1++];
       } else {
-        arr[i] = arr[deck2++];
+        arr[i] = aux[deck2++];
       }
     }
-  }
-
-  public static void main(String[] args) {
-    // read input
-    String[] arr = readAsArray();
-
-    Sorter.sort(arr, new SelectionSort());
-
-    assert Utils.isSorted(arr);
   }
 }

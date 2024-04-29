@@ -17,15 +17,4 @@ public class InsertionSort implements SortStrategy {
       }
     }
   }
-
-  public static void main(String[] args) {
-    // read input
-    String[] arr = Utils.readAsArray();
-
-    // sort
-    SortStrategy strategy = new InsertionSort();
-    Sorter.sort(arr, new InsertionSort());
-
-    assert Utils.isSorted(arr);
-  }
 }

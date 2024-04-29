@@ -26,13 +26,4 @@ public class ShellSort implements SortStrategy {
       gap /= 3;
     }
   }
-
-  public static void main(String[] args) {
-    // read input
-    String[] arr = Utils.readAsArray();
-
-    Sorter.sort(arr, new ShellSort());
-
-    assert Utils.isSorted(arr);
-  }
 }

@@ -20,13 +20,4 @@ public class SelectionSort implements SortStrategy {
       swap(arr, i, min);
     }
   }
-
-  public static void main(String[] args) {
-    // read input
-    String[] arr = readAsArray();
-
-    Sorter.sort(arr, new SelectionSort());
-
-    assert Utils.isSorted(arr);
-  }
 }
