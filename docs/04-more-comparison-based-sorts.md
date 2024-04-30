@@ -76,7 +76,7 @@ For a heap that contains $n$ elements, by taking out the root element $n$ times 
 
 - Implement a heap and heapsort.
 
-  *Possible answer*: TBA
+  *Possible answer*: [HeapSort.java](../src/main/java/sorts/HeapSort.java)
 
 - Suppose we have $n$ integers and want to keep $m (< n)$ greatest ones.
   How can we do that with heap? How much time does it take?
@@ -85,7 +85,7 @@ For a heap that contains $n$ elements, by taking out the root element $n$ times 
 
 - Implement a priority queue.
 
-  *Possible answer*: TBA
+  *Possible answer*: [MaxPriorityQueue.java](../src/main/java/collections/MaxPriorityQueue.java)
 
 - Can we build stacks and queues using a priority queue?
   If so, what kind of "priority" do they use?
