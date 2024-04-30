@@ -1,7 +1,5 @@
 package jalt.collections;
 
-import java.util.Iterator;
-
 public interface Stack<T> extends Iterable<T> {
   public void push(T element);
   public T pop();
