@@ -98,3 +98,20 @@ Merge sort is stable.
 *Exercises*
 
 - What makes merge sort stable? (See merging step that combines sorted deck from two sub decks.)
+
+## Application: finding k-th greatest value
+
+Given an (unsorted) array $A$ of size $n$, how can we find the $k$th greatest value?
+
+One simple solution: sort $A$ and get `A[k]`.
+If we use sorting algorithm with $O(n \lg n)$ time complexity, it also takes that much time.
+
+*Exercises*
+
+- We can use a heap of size $k$ for this problem, with the time complexity $O(n \lg k)$ (why?).
+  Can you come up with a specific algorithm?
+
+- There is an algorithm called **quickselect**, which uses partitioning in quick sort, to find $k$th greatest element.
+  Implement quicksort.
+
+- Of the methods above, if we have to keep the top 5 greatest values, which one is better?
