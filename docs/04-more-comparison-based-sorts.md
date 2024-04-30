@@ -89,3 +89,12 @@ For a heap that contains $n$ elements, by taking out the root element $n$ times 
 
 - Can we build stacks and queues using a priority queue?
   If so, what kind of "priority" do they use?
+
+## Properties of sorting algorithms
+
+A sorting algorithm is **stable** if it keeps the relative order.
+Merge sort is stable.
+
+*Exercises*
+
+- What makes merge sort stable? (See merging step that combines sorted deck from two sub decks.)
